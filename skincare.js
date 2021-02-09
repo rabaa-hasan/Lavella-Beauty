@@ -5,6 +5,7 @@ while (buy !== "cream" && buy !== "mask")
     var buy = prompt("What do you want Cream or mask?");
 
 }
+
 var itemBuy='';
 if (buy =="cream")
 {
@@ -13,17 +14,20 @@ if (buy =="cream")
 }
 else if(buy =="mask")
 {
-    itemBuy='<img src="https://cf.shopee.ph/file/ca9b4ebcfcec77b0bc923ac48ce7834c">';
+    itemBuy='<img src="https://cf.shopee.ph/file/ca9b4ebcfcec77b0bc923ac48ce7834c" width=180 >';
 
 }
 var numofproducts = prompt("Hom many of the product you want?");
 var result ='';
-var re='';
+var re=0;
 for (var i=0 ; i<numofproducts ; i++)
 {
     result+=itemBuy;
     re+=1;
 }
 document.write(result);
-var s ='Number Of products is';
-console.log(s);
+
+function noOfProducts(){
+document.write('Number of products that you want to buy is ' + re);
+}
+noOfProducts();
